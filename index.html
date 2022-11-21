@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Flipper</title>
+</head>
+<body>
+    <div class="container">
+        <div id="box" style="background: rgb(37, 129, 37);">
+            <h1 id="innertext">RGB(37, 129, 37)</h1>
+            <button id="button">New Colour</button>
+        </div>
+    </div>
+    <script>
+        const button=document.getElementById("button");
+button.addEventListener("click",function getNemColour(){
+    let x=Math.floor(Math.random()*255);
+    let y=Math.floor(Math.random()*255);
+    let z=Math.floor(Math.random()*255);
+    let bgColour="RGB("+x+","+y+","+z+")";
+    document.getElementById("innertext").innerText=bgColour;
+    document.getElementById("box").style.background=bgColour;
+});
+
+    </script>
+</body>
+</html>
